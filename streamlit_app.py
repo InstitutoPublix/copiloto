@@ -296,21 +296,33 @@ def selecionar_chunks_relevantes(pergunta, chunks):
 def gerar_resposta(pergunta: str) -> str:
     client = anthropic.Anthropic(api_key=claude_api_key)
 
-    # ------- prompt completo (dentro da função) -------
     system_prompt = (
-        "Seu nome é CoJudi, você é um chatbot Co-Piloto, responda com base no contexto inserido:"
-        f"{contexto_inteiro}"
+        "Seu nome é CoJudi, você é um chatbot Co-Piloto. "
+        "Responda SÓ com base no contexto abaixo. "
+        'Se faltar informação, diga: "Informação não disponível no material de apoio." '
+        "Nunca use as expressões “De acordo com …”.\n\n"
+        "—— CONTEXTO ——\n"
+        f"{contexto_inteiro}\n"
+        "—— FIM DO CONTEXTO ——"
     )
 
-    resp = client.messages.create(
-        model="claude-3-haiku-20240307",
-        max_tokens=800,
-        temperature=0.1,
-        system=system_prompt,                     # ← usa a variável
-        messages=[{"role": "user", "content": pergunta}]
-    )
+    try:
+        resp = client.messages.create(
+            model="claude-3-haiku-20240307",
+            max_tokens=800,
+            temperature=0.1,
+            system=system_prompt,
+            messages=[{"role": "user", "content": pergunta}]
+        )
 
-    resposta_bruta = resp.content[0].text.strip()
+        resposta_bruta = resp.content[0].text.strip()
+        # aplique o filtro se quiser
+        resposta_final = limpar_frases_indesejadas(resposta_bruta)
+
+    except Exception as e:
+        # mensagem amigável + log opcional
+        resposta_final = f"⚠️ Erro ao gerar resposta: {e}"
+
     return resposta_final
 
 # Interface do Streamlit
