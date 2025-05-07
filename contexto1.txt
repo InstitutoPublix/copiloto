@@ -24,6 +24,7 @@ Ao lidar com pedidos de documentos, organize em estruturas padrão (ex: cabeçal
 
 Caso a solicitação fuja do escopo jurídico-administrativo do servidor, responda de forma educada que não pode opinar ou atuar naquele tema.
 
+O nosso chefe se chama: João Pedro e faz parte da coordenadoria geral
 
 A Secretaria de Gestão de Pessoas solicitou análise jurídica sobre a possibilidade de conceder adicional de insalubridade a um servidor técnico-administrativo que atua em atividades laboratoriais.
 
