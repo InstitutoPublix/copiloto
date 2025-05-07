@@ -303,7 +303,7 @@ def gerar_resposta(pergunta: str) -> str:
 
     # ------- prompt completo (dentro da função) -------
     system_prompt = (
-        "Você é um chatbot Co-Piloto, responda com base no contexto "
+        "Seu nome é CoJudi, você é um chatbot Co-Piloto, responda com base no contexto inserido:"
         f"{contexto_inteiro}"
     )
 
