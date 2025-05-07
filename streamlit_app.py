@@ -23,6 +23,11 @@ st.set_page_config(
     layout="wide",
 )
 
+st.markdown(
+    "<h1 style='text-align:center; margin-top:0'>CoJudi</h1>",
+    unsafe_allow_html=True
+)
+
 _PADROES = [
     r"de acordo com as informações[^.]*\.?\s*",
     r"de acordo com o guia[^.]*\.?\s*",
