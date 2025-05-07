@@ -297,11 +297,6 @@ _PADROES_INDESEJADOS = [
     r"conforme (o|a) material[^.]*\.?\s*"
 ]
 
-def limpar_frases_indesejadas(texto: str) -> str:
-    """Remove qualquer ocorrência das frases proibidas (case-insensitive)."""
-    for padrao in _PADROES_INDESEJADOS:
-        texto = re.sub(padrao, "", texto, flags=re.I)
-    return texto.strip()
 
 def gerar_resposta(pergunta: str) -> str:
     client = anthropic.Anthropic(api_key=claude_api_key)
