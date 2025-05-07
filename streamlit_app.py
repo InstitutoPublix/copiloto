@@ -308,12 +308,7 @@ def gerar_resposta(pergunta: str) -> str:
 
     # ------- prompt completo (dentro da função) -------
     system_prompt = (
-        "Você é um chatbot Co-Piloto "
-        "Responda SÓ com base no contexto abaixo — se faltar informação, diga: "
-        "\"Informação não disponível no material de apoio.\" "
-        "Quando a pergunta mencionar turma, aula ou mentoria, consulte a tabela e responda exatamente com a(s) linha(s) correspondentes."
-        "Responda de forma direta, começando já com a informação pedida."
-        "REGRA OBRIGATÓRIA: Nunca use expressões como 'De acordo com as informações...', 'De acordo com as informações fornecidas'.\n\n"
+        "Você é um chatbot Co-Piloto, responda com base no contexto "
         f"{contexto_inteiro}"
     )
 
