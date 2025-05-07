@@ -351,7 +351,7 @@ with st.container():
                     st.markdown(f"**Você:** {mensagem['user']}", unsafe_allow_html=True)
             if mensagem["bot"]:
                 with st.chat_message("assistant"):
-                    st.markdown(f"**Mentor Virtual TJCE:**\n\n{mensagem['bot']}", unsafe_allow_html=True)
+                    st.markdown(f"**Co-Piloto:**\n\n{mensagem['bot']}", unsafe_allow_html=True)
     else:
         with st.chat_message("assistant"):
-            st.markdown("*Mentor Virtual TJCE:* Nenhuma mensagem ainda.", unsafe_allow_html=True)
+            st.markdown("*Co-Piloto:* Nenhuma mensagem ainda.", unsafe_allow_html=True)
