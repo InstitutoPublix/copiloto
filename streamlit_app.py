@@ -18,7 +18,7 @@ if not claude_api_key:
 
 # Configurações iniciais
 st.set_page_config(
-    page_title=" Co-Piloto",
+    page_title=" CoJudi",
     page_icon="🏛️",
     layout="wide",
 )
@@ -237,7 +237,7 @@ if "mensagens_chat" not in st.session_state:
 # Mensagem inicial automática
 if not st.session_state.mensagens_chat:
     mensagem_inicial = """Olá! 👋  
-Sou o **Co-Piloto** e estou aqui para te ajudar!
+Sou o **CoJudi** e estou aqui para te ajudar!
 
 
 Fique à vontade para perguntar o que quiser."""
@@ -355,7 +355,7 @@ with st.container():
                     st.markdown(f"**Você:** {mensagem['user']}", unsafe_allow_html=True)
             if mensagem["bot"]:
                 with st.chat_message("assistant"):
-                    st.markdown(f"**Co-Piloto:**\n\n{mensagem['bot']}", unsafe_allow_html=True)
+                    st.markdown(f"**CoJudi:**\n\n{mensagem['bot']}", unsafe_allow_html=True)
     else:
         with st.chat_message("assistant"):
-            st.markdown("*Co-Piloto:* Nenhuma mensagem ainda.", unsafe_allow_html=True)
+            st.markdown("*CoJudi:* Nenhuma mensagem ainda.", unsafe_allow_html=True)
