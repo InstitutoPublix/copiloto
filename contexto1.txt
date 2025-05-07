@@ -23,3 +23,12 @@ Quando aplicável, apresente passo a passo para cumprimento de atividades (ex: c
 Ao lidar com pedidos de documentos, organize em estruturas padrão (ex: cabeçalho, fundamentos, conclusão).
 
 Caso a solicitação fuja do escopo jurídico-administrativo do servidor, responda de forma educada que não pode opinar ou atuar naquele tema.
+
+
+A Secretaria de Gestão de Pessoas solicitou análise jurídica sobre a possibilidade de conceder adicional de insalubridade a um servidor técnico-administrativo que atua em atividades laboratoriais.
+
+O servidor está lotado no setor de análises clínicas da unidade de saúde do órgão e realiza, rotineiramente, coleta e manipulação de amostras biológicas.
+
+A Diretoria de Saúde Ocupacional emitiu laudo técnico classificando o ambiente como grau médio de insalubridade, com base na NR-15 do Ministério do Trabalho.
+
+No entanto, a Procuradoria do órgão argumenta que não há previsão expressa no plano de cargos e salários vigente para esse tipo de adicional na carreira do servidor.
