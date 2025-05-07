@@ -219,21 +219,8 @@ div.stChatInput textarea::placeholder {
     unsafe_allow_html=True
 )
 
-# Caminho para a logo do bot
-LOGO_BOT_PATH = "assets/icon_tjce_branco.png"
 
-# Verificar se o arquivo da logo existe
-if os.path.exists(LOGO_BOT_PATH):
-    try:
-        LOGO_BOT = Image.open(LOGO_BOT_PATH)
-    except Exception as e:
-        st.error(f"Erro ao carregar a logo: {e}")
-        LOGO_BOT = None
-else:
-    LOGO_BOT = None
 
-# Caminho para o ícone personalizado (CASO QUEIRA LOGO AO LADO DO TÍTULO, ALTERAR AQUI)
-ICON_PATH = "assets/icon_car.jpg"
 
 # Verificar se o arquivo do ícone existe
 if os.path.exists(ICON_PATH):
@@ -362,17 +349,6 @@ def gerar_resposta(pergunta: str) -> str:
     resposta_bruta = resp.content[0].text.strip()
     resposta_final = limpar_frases_indesejadas(resposta_bruta)
     return resposta_final
-
-# Adicionar a logo na sidebar
-if LOGO_BOT:
-    st.sidebar.image(LOGO_BOT, width=300)
-else:
-    st.sidebar.markdown("**Logo não encontrada**")
-
-st.sidebar.image("assets/logo_escola.png", use_container_width=True)
-st.sidebar.image("assets/logo_publix.png", use_container_width=True)
-
-
 
 # Interface do Streamlit
 
