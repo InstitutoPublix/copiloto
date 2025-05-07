@@ -291,7 +291,10 @@ def selecionar_chunks_relevantes(pergunta, chunks):
     return chunks_relevantes[:2]  # Limita a 2 chunks para evitar excesso de tokens
 
 
-
+def limpar_frases_indesejadas(txt: str) -> str:
+    for p in _PADROES:
+        txt = re.sub(p, "", txt, flags=re.I)
+    return txt.strip() or "Informação não disponível no material de apoio."
 
 def gerar_resposta(pergunta: str) -> str:
     client = anthropic.Anthropic(api_key=claude_api_key)
