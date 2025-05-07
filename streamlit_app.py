@@ -18,7 +18,7 @@ if not claude_api_key:
 
 # Configurações iniciais
 st.set_page_config(
-    page_title=" Mentor Virtual TJCE",
+    page_title=" Co-Piloto",
     page_icon="🏛️",
     layout="wide",
 )
@@ -221,7 +221,7 @@ div.stChatInput textarea::placeholder {
 
 # Subtítulo com fonte reduzida e texto preto
 st.markdown(
-    '<cp class="subtitulo">Olá, tudo bem? Sou o Mentor Virtual do curso de Transformação Digital. Fui feito pelo TJCE em parceria com o Instituto Publix, posso te dar dicas de caminhos a seguir, tirar dúvidas, e muito mais! Pra iniciar, é só mandar uma mensagem na caixa de perguntas aqui embaixo!</p>',
+    '<cp class="subtitulo">Olá, tudo bem? Sou um chat Co-Piloto. Fui feito para te auxiliar com eventuais demandas e fornecer apoio estratégico em decisões.</p>',
     unsafe_allow_html=True
 )
 
@@ -232,12 +232,8 @@ if "mensagens_chat" not in st.session_state:
 # Mensagem inicial automática
 if not st.session_state.mensagens_chat:
     mensagem_inicial = """Olá! 👋  
-Sou o **Mentor Virtual** e estou aqui para te ajudar com o curso de Transformação Digital.
+Sou o **Co-Piloto** e estou aqui para te ajudar!
 
-Você pode me perguntar, por exemplo:
-- 📌 O que é o curso e como ele funciona?
-- 🗂️ Quais os dias e horários das aulas?
-- 📝 O que é esperado no projeto final?
 
 Fique à vontade para perguntar o que quiser."""
     st.session_state.mensagens_chat.append({"user": None, "bot": mensagem_inicial})
@@ -312,7 +308,7 @@ def gerar_resposta(pergunta: str) -> str:
 
     # ------- prompt completo (dentro da função) -------
     system_prompt = (
-        "Você é o Professor Virtual do TJCE. "
+        "Você é um chatbot Co-Piloto "
         "Responda SÓ com base no contexto abaixo — se faltar informação, diga: "
         "\"Informação não disponível no material de apoio.\" "
         "Quando a pergunta mencionar turma, aula ou mentoria, consulte a tabela e responda exatamente com a(s) linha(s) correspondentes."
