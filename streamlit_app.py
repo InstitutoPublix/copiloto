@@ -311,7 +311,6 @@ def gerar_resposta(pergunta: str) -> str:
     )
 
     resposta_bruta = resp.content[0].text.strip()
-    resposta_final = limpar_frases_indesejadas(resposta_bruta)
     return resposta_final
 
 # Interface do Streamlit
