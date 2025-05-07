@@ -23,6 +23,11 @@ st.set_page_config(
     layout="wide",
 )
 
+_PADROES = [
+    r"de acordo com as informações[^.]*\.?\s*",
+    r"de acordo com o guia[^.]*\.?\s*",
+    r"conforme (o|a) material[^.]*\.?\s*"
+]
 
 # CSS personalizado para estilizar o balão de upload e o aviso
 
