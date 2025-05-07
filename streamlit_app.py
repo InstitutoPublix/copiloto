@@ -219,23 +219,6 @@ div.stChatInput textarea::placeholder {
     unsafe_allow_html=True
 )
 
-
-
-
-# Verificar se o arquivo do ícone existe
-if os.path.exists(ICON_PATH):
-    try:
-        # Usar st.columns para posicionar o ícone ao lado do título
-        col1, col2 = st.columns([1.5, 4])  # Ajuste as proporções conforme necessário
-        with col1:
-            st.image(ICON_PATH, width=10000000)  # Exibe o ícone com largura de 30px
-        with col2:
-            st.title("Mentor Virtual TJCE")  # Exibe o título
-    except Exception as e:
-        st.error(f"Erro ao carregar o ícone: {e}")
-else:
-    st.title("Mentor Virtual TJCE")  # Fallback se o ícone não existir
-
 # Subtítulo com fonte reduzida e texto preto
 st.markdown(
     '<cp class="subtitulo">Olá, tudo bem? Sou o Mentor Virtual do curso de Transformação Digital. Fui feito pelo TJCE em parceria com o Instituto Publix, posso te dar dicas de caminhos a seguir, tirar dúvidas, e muito mais! Pra iniciar, é só mandar uma mensagem na caixa de perguntas aqui embaixo!</p>',
