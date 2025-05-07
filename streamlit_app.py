@@ -312,7 +312,7 @@ def gerar_resposta(pergunta: str) -> str:
     system_prompt = (
         "Seu nome é CoJudi, você é um chatbot Co-Piloto. "
         "Responda SÓ com base no contexto abaixo. "
-        'Se faltar informação, diga: "Informação não disponível no material de apoio." '
+        'Dê respostas técnicas e embasadas em conceitos jurídicos'
         "Nunca use as expressões “De acordo com …”.\n\n"
         "—— CONTEXTO ——\n"
         f"{contexto_inteiro}\n"
