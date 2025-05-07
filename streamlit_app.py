@@ -290,12 +290,7 @@ def selecionar_chunks_relevantes(pergunta, chunks):
             chunks_relevantes.append(chunk)
     return chunks_relevantes[:2]  # Limita a 2 chunks para evitar excesso de tokens
 
-# frases que não queremos exibir
-_PADROES_INDESEJADOS = [
-    r"de acordo com as informações[^.]*\.?\s*",   # remove frase + até o ponto
-    r"de acordo com o guia[^.]*\.?\s*",
-    r"conforme (o|a) material[^.]*\.?\s*"
-]
+
 
 
 def gerar_resposta(pergunta: str) -> str:
