@@ -241,9 +241,8 @@ if "mensagens_chat" not in st.session_state:
 
 # Mensagem inicial automática
 if not st.session_state.mensagens_chat:
-    mensagem_inicial = """Olá! 👋  
-Sou o **CoJudi** e estou aqui para te ajudar!
-
+    mensagem_inicial = """Olá, Lukas! 👋  
+Como posso te ajudar hoje?
 
 Fique à vontade para perguntar o que quiser."""
     st.session_state.mensagens_chat.append({"user": None, "bot": mensagem_inicial})
