@@ -1,6 +1,5 @@
 import streamlit as st
 import anthropic
-import openai
 import os
 import re
 from PIL import Image
@@ -321,7 +320,7 @@ def gerar_resposta(pergunta: str) -> str:
     try:
         resp = client.messages.create(
             model="claude-3-haiku-20240307",
-            max_tokens=800,
+            max_tokens=600,
             temperature=0.1,
             system=system_prompt,
             messages=[{"role": "user", "content": pergunta}]
