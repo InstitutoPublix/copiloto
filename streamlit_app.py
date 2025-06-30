@@ -9,7 +9,7 @@ import streamlit.components.v1 as components
 import speech_recognition as sr
 from pathlib import Path # para percorrer diretórios
 from pypdf import PdfReader
-claude_api_key = os.getenv("CLAUDE_API_KEY")  # Streamlit Cloud injeta essa va
+claude_api_key = os.getenv("CLAUDE_API_KEY")  
 
 if not claude_api_key:
     st.error("Chave CLAUDE_API_KEY não configurada no servidor.")
